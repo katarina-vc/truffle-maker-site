@@ -1,0 +1,13 @@
+{
+    "themeColor": "#007BFF",
+    "welcomeMessage": "Welcome to Our Secure Site",
+    "apiKeys": {
+        "googleMaps": "AIzaSyB-incorrectApiKeyHereForDemo",
+        "weatherAPI": "ed9f48aee2117918dbincorrectApiKeyHereForDemo"
+    },
+    "database": {
+        "username": "user123",
+        "password": "securePassword123"
+    },
+    "developerEmail" :"fakeemail@gmail.com"
+}

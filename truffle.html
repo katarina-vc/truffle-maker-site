@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="truffle.css">
+    <script>
+        let appConfig = {};
+
+        fetch('config.json')
+            .then(response => response.json())
+            .then(config => {
+                appConfig = config; // Store configuration
+                document.getElementById('welcome').innerText = config.welcomeMessage;
+                document.querySelector('button').style.backgroundColor = config.themeColor;
+                document.addEventListener('DOMContentLoaded', function() {
+                });
+            })
+            .catch(error => {
+                console.error('Failed to load configuration:', error);
+                alert('Failed to load site configuration.');
+            });
+    </script>
+</head>
+<body>
+    <h1 id="welcome">Welcome to my super secure site!</h1>
+    <div>
+        <button onclick="callWeatherAPI()">Dummy Weather API Call</button>
+        <button onclick="fetchFromDatabase()">Dummy Database Fetch</button>
+        <button onclick="alertDeveloper()">Dummy Alert Developer Failure</button>
+        <button onclick="callGoogleMapsAPI()">Dummy Google Maps API Call</button>
+    </div>
+    <p id="secretArea"></p>
+    <script src="truffle.js"></script>
+</body>
+</html>
